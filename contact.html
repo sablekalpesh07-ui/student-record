@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Kalpesh Sable</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-code"></i>
+                <span>Kalpesh</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="projects.html" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="skills.html" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="education.html" class="nav-link">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="page-header">
+            <h1>Get In Touch</h1>
+            <p>Let's connect and discuss your next project</p>
+        </div>
+
+        <div class="contact-container">
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <div class="info-items">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Location</h3>
+                            <p>Pune, Maharashtra, India</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Email</h3>
+                            <p>
+                                <a href="mailto:kalpeshssable@gmail.com">kalpeshssable@gmail.com</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Phone</h3>
+                            <p>
+                                <a href="tel:+91-8390527701">+91-8390527701</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Response Time</h3>
+                            <p>I'll get back within 24 hours</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div class="social-section">
+                    <h3>Follow Me</h3>
+                    <div class="social-icons">
+                        <a href="https://github.com/dashboard" class="social-icon-large" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/feed/" class="social-icon-large" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        </a>
+                        <a href="https://www.instagram.com/" class="social-icon-large" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper">
+                <h2>Send Me a Message</h2>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            placeholder="Enter your full name" 
+                            required
+                        >
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="Enter your email" 
+                            required
+                        >
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number (Optional)</label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            placeholder="Enter your phone number"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input 
+                            type="text" 
+                            id="subject" 
+                            name="subject" 
+                            placeholder="What is this about?" 
+                            required
+                        >
+                        <span class="error-message" id="subjectError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            rows="6" 
+                            placeholder="Tell me more about your project or inquiry..." 
+                            required
+                        ></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+
+                    <div id="successMessage" class="success-message" style="display: none;">
+                        <i class="fas fa-check-circle"></i>
+                        Thank you! Your message has been sent successfully. I'll get back to you soon!
+                    </div>
+                </form>
+            </div>
+
+        </div>
+  
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Kalpesh Sable. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
