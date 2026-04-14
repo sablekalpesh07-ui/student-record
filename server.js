@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 // 🔥 FIXED PATH (IMPORTANT LINE)
-const publicPath = path.join(process.cwd(), "public");
+const publicPath = path.resolve("public");
 
 app.use(express.static(publicPath));
 
