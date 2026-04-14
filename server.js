@@ -8,38 +8,32 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// ✅ serve frontend
-app.use(express.static(path.join(__dirname, "public")));
+// 🔥 FIXED PATH (IMPORTANT LINE)
+const publicPath = path.join(process.cwd(), "public");
 
-// ✅ ONLY ONE route
+app.use(express.static(publicPath));
+
 app.get("/", (req, res) => {
-    res.sendFile("index.html", {
-        root: path.join(__dirname, "public")
-    });
+    res.sendFile("index.html", { root: publicPath });
 });
 
 const FILE = "messages.json";
 
-// Save message
 app.post("/contact", (req, res) => {
-    const newMessage = req.body;
-
     let messages = [];
     if (fs.existsSync(FILE)) {
         messages = JSON.parse(fs.readFileSync(FILE));
     }
 
-    messages.push(newMessage);
+    messages.push(req.body);
     fs.writeFileSync(FILE, JSON.stringify(messages, null, 2));
 
     res.json({ message: "Saved successfully" });
 });
 
-// Get all messages
 app.get("/messages", (req, res) => {
     if (!fs.existsSync(FILE)) return res.json([]);
-    const messages = JSON.parse(fs.readFileSync(FILE));
-    res.json(messages);
+    res.json(JSON.parse(fs.readFileSync(FILE)));
 });
 
 const PORT = process.env.PORT || 5000;
