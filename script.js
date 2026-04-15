@@ -427,30 +427,3 @@ window.portfolio = {
     animateCounters,
     createParticles
 };
-document.getElementById("contactForm").addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const subject = document.getElementById("subject").value;
-    const message = document.getElementById("message").value;
-
-    console.log(name, email, subject, message); // 🔍 DEBUG
-
-    const data = { name, email, subject, message };
-
-    try {
-        const res = await fetch("/contact", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
-        });
-
-        alert("Message sent successfully!");
-    } catch (err) {
-        console.error(err);
-        alert("Error sending message");
-    }
-});
